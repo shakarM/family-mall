@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:site": "for e in both simple pro; do ENTRY=$e vite build || exit 1; done && mkdir -p site && cp dist/both/both.html site/index.html && cp dist/simple/simple.html site/simple.html && cp dist/pro/pro.html site/pro.html"
   },
   "dependencies": {
     "react": "^19.3.1",
